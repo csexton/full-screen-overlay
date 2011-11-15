@@ -1,0 +1,25 @@
+*.o
+aclocal.m4
+config.log
+config.status
+nobuagent
+.deps
+autom4te.cache
+Makefile
+
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+*.pkg
+
+# old skool
+.svn
+
+# osx noise
+.DS_Store
+profile
+shared/version.h
+*.perspectivev3
+xcuserdata
+project.xcworkspace
