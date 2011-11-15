@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Full Screen Overlay' target in the 'Full Screen Overlay' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
