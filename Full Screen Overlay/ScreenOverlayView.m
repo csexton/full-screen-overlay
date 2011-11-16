@@ -12,10 +12,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code here.
-        downLocation = CGPointMake(0, 0);
-        downLocation = CGPointMake(0, 0);
-        drawing = NO;
+		// no need for this: everything is initialized to 0's or nil during init.
+		// (In other words, the code below is simply redundant)
+		
+//        // Initialization code here.
+//        downLocation = CGPointMake(0, 0);
+//        downLocation = CGPointMake(0, 0);
+//        drawing = NO;
     }
     return self;
 }
@@ -24,6 +27,8 @@
     LogDebugMsg;
 //    [self updateTrackingAreas];
 }
+
+
 - (void)updateTrackingAreas
 {
     // This is called when the window is resized
@@ -73,19 +78,15 @@
 
 
 - (void)drawRect:(NSRect)rect {
-	NSGraphicsContext* graphicsContext = [NSGraphicsContext currentContext];
-	CGContextRef context = (CGContextRef) [graphicsContext graphicsPort];
-	    
-    if (drawing) {
-        CGContextSaveGState(context);
-        CGContextSetRGBStrokeColor(context, 1, 0.0, 0.0, 0.8);
-        CGContextSetLineWidth(context, 2.0);
-        CGContextBeginPath(context);
-        CGContextMoveToPoint(context, downLocation.x, downLocation.y);
-        CGContextAddLineToPoint(context, currentLocation.x, currentLocation.y);
-        CGContextDrawPath(context,kCGPathStroke);
-        CGContextRestoreGState(context);
-    }
+	// below should probably be "pre-multiplied" by the alpha
+//	[[NSColor colorWithCalibratedRed:1.0 green:0.0 blue:0.0 alpha:0.8] set];
+	
+	// premultiplied version:
+	
+	[[NSColor colorWithCalibratedRed:0.8 green:0.0 blue:0.0 alpha:0.8] set];
+	[NSBezierPath setDefaultLineWidth:2.0];
+	[NSBezierPath strokeLineFromPoint:currentLocation toPoint:downLocation];
+	
 }
 
 - (void)mouseUp:(NSEvent *)event {

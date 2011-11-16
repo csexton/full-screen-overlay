@@ -15,6 +15,7 @@
 		B551F3AE1472F31E00FE6200 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B551F3AC1472F31E00FE6200 /* MainMenu.xib */; };
 		B551F3B61472F3E500FE6200 /* ScreenOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B551F3B51472F3E500FE6200 /* ScreenOverlayView.m */; };
 		B551F3C41472F7D000FE6200 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B551F3C31472F7D000FE6200 /* LICENSE */; };
+		C177CAC01473261500CAA809 /* MDScreenOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C177CABF1473261500CAA809 /* MDScreenOverlayWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		B551F3B41472F3E500FE6200 /* ScreenOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenOverlayView.h; sourceTree = "<group>"; };
 		B551F3B51472F3E500FE6200 /* ScreenOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenOverlayView.m; sourceTree = "<group>"; };
 		B551F3C31472F7D000FE6200 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C177CABE1473261500CAA809 /* MDScreenOverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDScreenOverlayWindow.h; sourceTree = "<group>"; };
+		C177CABF1473261500CAA809 /* MDScreenOverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDScreenOverlayWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 		B551F39D1472F31D00FE6200 /* Full Screen Overlay */ = {
 			isa = PBXGroup;
 			children = (
+				C177CABE1473261500CAA809 /* MDScreenOverlayWindow.h */,
+				C177CABF1473261500CAA809 /* MDScreenOverlayWindow.m */,
 				B551F3B41472F3E500FE6200 /* ScreenOverlayView.h */,
 				B551F3B51472F3E500FE6200 /* ScreenOverlayView.m */,
 				B551F3A91472F31D00FE6200 /* AppDelegate.h */,
@@ -177,6 +182,7 @@
 				B551F3A41472F31D00FE6200 /* main.m in Sources */,
 				B551F3AB1472F31D00FE6200 /* AppDelegate.m in Sources */,
 				B551F3B61472F3E500FE6200 /* ScreenOverlayView.m in Sources */,
+				C177CAC01473261500CAA809 /* MDScreenOverlayWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +220,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -230,7 +236,6 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -240,7 +245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -250,7 +255,6 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -296,6 +300,7 @@
 				B551F3B31472F31E00FE6200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
