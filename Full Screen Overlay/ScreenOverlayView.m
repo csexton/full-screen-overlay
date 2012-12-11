@@ -36,7 +36,7 @@
     [trackingArea release];
 }
 
-- (void)viewDidLoad {
+- (void)viewWillDraw {
     LogDebugMsg;
     [NSCursor hide];
 }
