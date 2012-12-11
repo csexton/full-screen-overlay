@@ -98,7 +98,6 @@
     downLocation = [self convertPoint:[event locationInWindow] fromView:[[self window] contentView]];
     currentLocation = [self convertPoint:[event locationInWindow] fromView:[[self window] contentView]];
     drawing = YES;
-	[self setNeedsDisplay:YES];
 }
 
 -(void)mouseDragged:(NSEvent *)event {   
