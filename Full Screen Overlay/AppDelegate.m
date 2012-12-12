@@ -40,8 +40,6 @@
     ScreenOverlayView *subview = [[ScreenOverlayView alloc] initWithFrame:NSZeroRect];
     
     
-    
-    [[self.window contentView] addSubview:subview];
     [self.window setContentView:subview];
     
     [self.window makeFirstResponder:subview];
